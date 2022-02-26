@@ -14,7 +14,7 @@ Why, you ask? Well, why not?
 
 ## Installation
 
-1. Make sure you have [`jq`](https://stedolan.github.io/jq/) and [`base64`](https://www.gnu.org/software/coreutils/manual/html_node/base64-invocation.html) installed and on your PATH. (The script has been tested with jq 1.6 and ffmpeg 4.2.4.)
+1. Make sure you have [`jq`](https://stedolan.github.io/jq/), [`base64`](https://www.gnu.org/software/coreutils/manual/html_node/base64-invocation.html), and [`ffmpeg`](https://ffmpeg.org/) installed and on your PATH. (The script has been tested with jq 1.6, base64 8.30, and ffmpeg 4.2.4.)
 2. Download the script, put it somewhere on your PATH, and make it executable.
 
 ## Usage
