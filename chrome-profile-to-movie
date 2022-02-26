@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Converts a Chrome DevTools page performance profile into a moving image composed of the profile's embedded screenshots.
+
+usage() {
+  echo "Usage: $0 < PROFILE_JSON > MOVIE_FILE" 1>&2
+}
+
+# There are no options or arguments
+if [ -n "$*" ]; then usage && exit 1; fi
+
+# TODO: use jq's built-in base64 decoder instead of GNU coreutils
+# TODO: support different output formats
+# FIXME: instead of a fixed frame rate, use screenshot timestamps to position each frame in the final output
+jq --join-output 'map(select(.name == "Screenshot").args.snapshot) | .[]' \
+| base64 --decode - \
+| ffmpeg \
+    -f mjpeg -r 10 -i - \
+    -f gif pipe:1
