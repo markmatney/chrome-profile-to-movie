@@ -4,11 +4,11 @@ This is a shell script that converts a page performance profile, recorded with C
 
 In other words, it transforms something like this (which is represented as JSON):
 
-![a screenshot of the "Performance" tab in Chrome DevTools with a page performance profile loaded](chrome-devtools-performance-profile.png)
+![a screenshot of the "Performance" tab in Chrome DevTools with a page performance profile loaded](doc/chrome-devtools-performance-profile.png)
 
 into this:
 
-![a rendering of a section of the GitHub homepage](github-homepage.gif)
+![a rendering of a section of the GitHub homepage](doc/github-homepage.gif)
 
 Why, you ask? Well, why not?
 
